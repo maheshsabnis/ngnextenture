@@ -1,0 +1,19 @@
+<h1>Dynamic Contact Form Generator</h1>
+
+<div class="container">
+    <form [formGroup]="contactForm" (ngSubmit)="save()">
+         <div class="form-group" *ngFor="let field of fields">
+             <label>{{field}}
+             <input type="text" class="form-control"
+              [formControlName] = "field"
+             />
+            </label>
+         </div>
+         <button type="submit">Save</button>
+    </form>
+    <hr/>
+    <h4>Using Dynamic Form Generator</h4>
+<app-dynamicformgenerator-component  [formModel]="person"></app-dynamicformgenerator-component>
+<br/>
+<app-dynamicformgenerator-component  [formModel]="employee"></app-dynamicformgenerator-component>
+</div>

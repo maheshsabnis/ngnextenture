@@ -1,0 +1,13 @@
+<h1>Dynamic Contact Form Generator</h1>
+
+<div class="container">
+    <form [formGroup]="dynamicForm">
+         <div class="form-group" *ngFor="let field of fields">
+             <label>{{field}}
+             <input type="text" class="form-control"
+              [formControlName] = "field"
+             />
+            </label>
+         </div>
+    </form>
+</div>
