@@ -9,3 +9,7 @@
   - Plan for Behavior (Logic + Events)
     - This is used to decide about the mechansim using which the component can connect with its parent     
       - USed to define @Output EVentEmitter
+
+      https://www.webnethelper.com/2022/11/implementing-server-side-pagination.html
+
+        https://www.webnethelper.com/2022/11/implementing-server-side-pagination.html
