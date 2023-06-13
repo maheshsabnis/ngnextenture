@@ -49,6 +49,22 @@
 
     https://www.dotnetcurry.com/angularjs/1445/angular-services-component-communication
     
-             
+# Design Practices, Patterns
+- Services
+  - Service for all modules in App must be 'Singleton' i.e. 'root'
+  - Service scopped to specific modules must be instantiated for that all components of that module them register it the providers of that module only
+  - Service for specific components and hence for all of its children then register in providers of that component
+  - If a Component(s) are trying to use multiple services then instead of individual service inbjection in component, create a facade service and inject all services in this facade service and this facade service can then be injected in component(s)
+  - Create a Interceptor when using the additional headers to every HTTP outgoing message e.g. Headerrs, Tokens, etc.
+
+
+- Components
+  - Use @ViewChild instead of @Input to avoid the changes in child for each change in parent                    
+  - *** Choose for dynamic creation of same component when that very same component needs to be rendered but only change in some of its properties  
+    - We need the Factory Pattern
+  - Choose for Dynamic Forms when required
+- Custom UI behaviors
+  - If the component(s) is affected based on Keyboard/Mouse events then instaed of using frequent event binding for UI of each component, use Custom Directive
+
 
 

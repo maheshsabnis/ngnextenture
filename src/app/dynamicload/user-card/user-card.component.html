@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <div class="basic-info">
+    <div class="image">
+      <img alt="dd"
+        src="https://avatars.dicebear.com/api/male/tom.svg?background=%230000ff"
+      />
+    </div>
+    <div #personalData class="personal-data">
+      <h3>Name:</h3>
+      <p>Tom</p>
+      <h3>Surname:</h3>
+      <p>Doe</p>
+    </div>
+  </div>
+  <ng-template #id></ng-template>
+
+  <ng-template #id2 ></ng-template>
+
+  <!-- <app-id></app-id> -->
+  <div class="more-data">
+    <h3>Likes:</h3>
+    <p>Cricket, Movies, Visky</p>
+    <div class="more-data" fav-day>
+      <h3>Favorite day:</h3>
+      <p>Sunday</p>
+    </div>
+    <div class="more-data" dislikes>
+      <h3>Dislikes:</h3>
+      <p>Earli Waking up</p>
+    </div>
+
+  </div>
+  <button class="btn btn-warning"
+  (click)="toggle()">Show</button>
+</div>
