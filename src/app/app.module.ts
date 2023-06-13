@@ -17,6 +17,12 @@ import { DynamicFormUserComponent } from './demodynamicreactiveform/app-dynmaicf
 import { CategoryComponent } from './communiocations/app.category.component';
 import { ProductsComponent } from './communiocations/app.products.component';
 
+import { Product } from './models/app.product.model';
+import { Employee } from './models/app.person.model';
+import { IdComponent } from './dynamicload/id/id.component';
+import { UserCardComponent } from './dynamicload/user-card/user-card.component';
+
+
 @NgModule({
   declarations: [
     AppComponent, SImpleContactFormComponent,
@@ -25,13 +31,16 @@ import { ProductsComponent } from './communiocations/app.products.component';
     ProductReactiveFormComponent,
     DynamicReactiveFormComponent,
     DynamicFormUserComponent,
-    CategoryComponent,ProductsComponent
+    CategoryComponent,ProductsComponent,
+    IdComponent,UserCardComponent
   ],
   imports: [
     BrowserModule, ReactiveFormsModule, FormsModule,
     AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [CategoryComponent,ProductsComponent]
+  providers: [
+
+  ],
+  bootstrap: [UserCardComponent]
 })
 export class AppModule { }
