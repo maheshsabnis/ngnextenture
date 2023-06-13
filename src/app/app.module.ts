@@ -11,18 +11,27 @@ import { DynamicFormGeneratorComponent } from './dynamicform/dynamicformcomponen
 import { ProductComponent } from './productcomponent/app.product.component';
 import { SelectComponent } from './directives/component/selectcomponent/app.select.component';
 import { TableComponent } from './directives/component/tablecomponent/app.table.component';
+import { ProductReactiveFormComponent } from './productreactiveformcomponent/app.productreactiveform.component';
+import { DynamicReactiveFormComponent } from './demodynamicreactiveform/app.dynamicreactiveform.component';
+import { DynamicFormUserComponent } from './demodynamicreactiveform/app-dynmaicformuser.component';
+import { CategoryComponent } from './communiocations/app.category.component';
+import { ProductsComponent } from './communiocations/app.products.component';
 
 @NgModule({
   declarations: [
     AppComponent, SImpleContactFormComponent,
     DynaicFormControlComponent, DynamicFormGeneratorComponent, ProductComponent,
-    SelectComponent, TableComponent
+    SelectComponent, TableComponent,
+    ProductReactiveFormComponent,
+    DynamicReactiveFormComponent,
+    DynamicFormUserComponent,
+    CategoryComponent,ProductsComponent
   ],
   imports: [
     BrowserModule, ReactiveFormsModule, FormsModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [ProductComponent]
+  bootstrap: [CategoryComponent,ProductsComponent]
 })
 export class AppModule { }

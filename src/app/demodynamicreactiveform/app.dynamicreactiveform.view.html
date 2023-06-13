@@ -1,0 +1,15 @@
+<h1>The Dynamic Reactive Form</h1>
+<div class="container">
+  <form [formGroup]="dynamicForm" (ngSubmit)="save()">
+     <div class="container"
+      *ngFor="let field of fields" >
+         <label>
+           {{field}}
+           <input type="text" class="form-control"
+             [formControlName]="field"
+           >
+         </label>
+     </div>
+     <input type="submit" value="Save" class="btn btn-success">
+  </form>
+</div>

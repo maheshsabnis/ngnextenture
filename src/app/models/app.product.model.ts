@@ -8,3 +8,11 @@ export class Product {
     public Price: number
   ){}
 }
+
+
+export class EmployeeObj {
+  constructor(
+    public EmpNo:number,
+    public EmpName:string
+  ){}
+}
