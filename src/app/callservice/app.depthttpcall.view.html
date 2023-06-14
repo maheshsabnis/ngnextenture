@@ -1,0 +1,23 @@
+
+<h3>HTTP Calls</h3>
+<div class="container">
+    <table class="table table-bordered table-striped">
+       <tbody>
+          <tr>
+            <td>
+                <button class="btn btn-primary"
+                 (click)=" createDept()"
+                >Post</button>
+            </td>
+            <td>
+              <button class="btn btn-warning">Put</button>
+          </td>
+          <td>
+            <button class="btn btn-danger">Delete</button>
+        </td>
+          </tr>
+       </tbody>
+    </table>
+    <hr/>
+    <app-table-component [DataSource]="departments"></app-table-component>
+</div>

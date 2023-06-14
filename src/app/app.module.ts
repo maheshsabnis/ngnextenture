@@ -21,6 +21,9 @@ import { Product } from './models/app.product.model';
 import { Employee } from './models/app.person.model';
 import { IdComponent } from './dynamicload/id/id.component';
 import { UserCardComponent } from './dynamicload/user-card/user-card.component';
+import { HttpClientModule } from '@angular/common/http';
+
+import { DeptHttpCallComponent } from './callservice/app.depthttpcall.component';
 
 
 @NgModule({
@@ -32,11 +35,12 @@ import { UserCardComponent } from './dynamicload/user-card/user-card.component';
     DynamicReactiveFormComponent,
     DynamicFormUserComponent,
     CategoryComponent,ProductsComponent,
-    IdComponent,UserCardComponent
+    IdComponent,UserCardComponent,
+    DeptHttpCallComponent
   ],
   imports: [
     BrowserModule, ReactiveFormsModule, FormsModule,
-    AppRoutingModule
+    AppRoutingModule, HttpClientModule
   ],
   providers: [
 

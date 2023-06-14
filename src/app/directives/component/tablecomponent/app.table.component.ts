@@ -11,6 +11,7 @@ export class TableComponent implements OnInit {
   @Input() CanPaginate:boolean;
   @Input() PageSize:number;
   @Input() CanSort:boolean;
+  message:string;
   colSpan:number;
   headers:Array<any>;
   constructor() {
@@ -18,23 +19,11 @@ export class TableComponent implements OnInit {
     this.CanDelete = false;
     this.headers = new Array<any>();
     this.colSpan = 0;
+    this.message = '';
   }
 
   ngOnInit() {
     console.log('c');
-    if(this._DataSource !== undefined || this._DataSource.length > 0){
-      // Read the first Records from Arrau
-      let firstObject = this._DataSource[0];
-      this.headers = Object.keys(firstObject);
-      this.colSpan = this.headers.length;
-    }
-    else {
-      this.headers =[]; /* No Columns */
-    }
-
-    /*
-       Read DataSOurce to Generate Pages
-     */
   }
   /*
     The Change EVent that will show next-page data from DataSource
@@ -42,11 +31,20 @@ export class TableComponent implements OnInit {
 
     @Input()
     set DataSource(v:Array<any>){
-      console.log('Set Updated...');
-      this._DataSource = v;
+      console.log(`Set Updated... ${JSON.stringify(this._DataSource)}`);
+      this._DataSource  = v;
+      if(this._DataSource !== undefined && this._DataSource.length > 0){
+
+        let firstObject = this._DataSource[0];
+        this.headers = Object.keys(firstObject);
+        this.colSpan = this.headers.length;
+      } else {
+        this.message = 'No Data';
+      }
+
     }
     get DataSource():Array<any>{
-      console.log('Get Updated...');
+      console.log(`Get Updated... ${JSON.stringify(this._DataSource)}`);
       return this._DataSource;
     }
 }
