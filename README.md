@@ -85,6 +85,88 @@ this.fields.push({ ...fieldProps, fieldName: field });
 </form>
 
   ````
+- UI Reusability
+  - Component
+- Behavior ReUsability
+  - Directives
+    - Component
+      - Autonomous (UI + Data + Behavior)
+    - Structural
+      - Dynmaic DOM Management on UI THread
+        - *ngIf, *ngFor, *ngSwitchCase
+        - ng-template
+        - ng-Container
+    - Attribute, executed based on Events
+      - [(ngModel)]
+      - [formGroup]
+      - [formControlName]
+- Classes used by BrowserModule for Directives
+      - ElemenentRef
+        - The Class that holds reference of the DOM Element that will be impacted because of the Directive
+      - Rendrer2
+        - Affect the rendering  based on the Events and the data processed by that event
+      - HostListener
+        - Listen the Event that is raised on DOM Element
+    - A Custom Directive that do the the following
+      - Listen to MouseEnter and MouseLeave events
+      - Target to DOM Elements where these events are fired   
+      - Define the new rendering for those DOM events
+      - Apply the Style
+- UI COmpopsition with Angular
+  - Feature Modules aka Shared Modules
+    - These modules contains all re-Usable Objects (Components, Directives, and Services)
+    - These modules can also be other Angular applications    
+
+- Practices with Angular App to Address COmposinal Pattern
+  - If using multiple modules in the app then make sure that all components of those modules are declared into the individual Shared Module
+  - Eachn Shared module MUST import the 'CommonModule' please note that one Angular app can have only one BrowserModule  
+
+- Routers
+  - @angular/router
+    - RouterModule
+      - Root Level Routing
+        - a Table consiting of Route Expression for the Top level app
+        - The 'forRoot(ROUTE-TABLE)' 
+      - Lazy Routes
+        - Used for Lazy Loading
+        - Recommended for Managing the production bundle size of the main.js  
+        - The 'forChild(ROUTE-TABLE)'
+    - Routes
+      - COllection of 'Route'
+      - A Route Table
+        - Singleton Instance for the application
+      - Route
+        - A row in RouteTable
+          - path
+          - component
+          - Children:[] , a child route aka subroute
+            - These are the child routes those are early loaded
+          - redirectTo
+          - loadChildren, lazy loading and loads module from the host over HTTP request   
+          - canActivate, for Route Guards
+          - data, used when route guards needs to be eveluated for routing      
+      - Router
+        - The class used to provide an explicit routing based on events
+          - The 'navigate(PATH, [PARAMETERS])' method
+            - PARAMETERS, route parameters    
+            - navigateUrl()
+      - ActivatedRoute
+        - Used to provide a component subscription under the RouterModule to read route parameters
+          - The 'subscribe()' method 
+      - ActivatedRouterSnapShot
+        - USed in case of (mostly) the Guarded ROutes   
+      - router-Link
+        - An attribute direcive for Routing
+        - APplied to anchor tag
+        - USed for Querying to the router table
+      - router-outlet
+        - A Component that is injected with Components from Route expression based on query exeuted by router-link               
+
+
+
+
+
+
 
 
 

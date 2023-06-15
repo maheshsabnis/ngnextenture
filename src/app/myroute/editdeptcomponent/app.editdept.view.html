@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="form-group">
+      DeptNo:
+      <input type="text" class="form-control"
+        [(ngModel)]="dept.deptNo">
+  </div>
+  <div class="form-group">
+    DeptName:
+    <input type="text" class="form-control"
+    [(ngModel)]="dept.deptName"
+    >
+</div>
+<div class="form-group">
+  Location:
+  <input type="text" class="form-control"
+  [(ngModel)]="dept.location"
+  >
+</div>
+<div class="form-group">
+  Capacity:
+  <input type="text" class="form-control"
+  [(ngModel)]="dept.capacity"
+  >
+</div>
+<div class="btn-group-lg">
+  <button class="btn  btn-primary"
+  (click)="clear()"
+ >New</button>
+ <button class="btn  btn-success"
+   (click)="save()"
+ >Save</button>
+
+</div>
+</div>

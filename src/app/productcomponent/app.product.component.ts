@@ -14,12 +14,14 @@ export class ProductComponent implements OnInit, OnChanges {
   product:Product;
   categories = Categories;
   manufacturers = Manufacturers;
+  color:string;
   headers:Array<string>;
   constructor() {
     this.products = new Array<Product>();
     this.logic = new ProductLogic();
     this.product = new Product(0,'','','',0);
     this.headers = new Array<string>();
+    this.color = '';
   }
 
   ngOnInit() {

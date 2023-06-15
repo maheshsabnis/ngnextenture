@@ -24,6 +24,12 @@ import { UserCardComponent } from './dynamicload/user-card/user-card.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { DeptHttpCallComponent } from './callservice/app.depthttpcall.component';
+import { ColorDirective } from './directives/attribute/app.color.directive';
+import { SharedModule } from 'lib/app.shared.module';
+import { MainRoutingComponent } from './myroute/app.mainrouting.component';
+import { DeptListComponent } from './myroute/deptlistcomponent/app.deptlist.component';
+import { CreateDeptComponent } from './myroute/createdeptcomponent/app.createdept.component';
+import { EditDeptComponent } from './myroute/editdeptcomponent/app.editdept.component';
 
 
 @NgModule({
@@ -36,15 +42,21 @@ import { DeptHttpCallComponent } from './callservice/app.depthttpcall.component'
     DynamicFormUserComponent,
     CategoryComponent,ProductsComponent,
     IdComponent,UserCardComponent,
-    DeptHttpCallComponent
+    DeptHttpCallComponent, ColorDirective,
+  MainRoutingComponent, DeptListComponent,
+  CreateDeptComponent, EditDeptComponent
   ],
+  /* AppRoutingModule: This is loading routetable at
+    application level
+  */
   imports: [
     BrowserModule, ReactiveFormsModule, FormsModule,
-    AppRoutingModule, HttpClientModule
+    AppRoutingModule, HttpClientModule,
+    SharedModule
   ],
   providers: [
 
   ],
-  bootstrap: [UserCardComponent]
+  bootstrap: [MainRoutingComponent]
 })
 export class AppModule { }

@@ -60,6 +60,28 @@
 <!-- <app-table-component [DataSource]="products" [CanDelete]="true">
 
 </app-table-component> -->
+
+<div class="container">
+    <h4>Loading a Shared Component</h4>
+    <app-shared-component></app-shared-component>
+</div>
+
+
+<div class="container">
+  <table class="table">
+     <tr>
+      <td>
+        <input type="radio" name="r" value="red" (click)="color='red'"/>Red
+      </td>
+      <td>
+        <input type="radio" name="r" value="blue" (click)="color='blue'"/>Blue
+      </td>
+      <td>
+        <input type="radio"  name="r" value="yellow" (click)="color='yellow'"/>Yellow
+      </td>
+     </tr>
+  </table>
+</div>
 <div class="container">
 <table class="table table-bordered table-striped">
    <thead>
@@ -67,12 +89,12 @@
        <th *ngFor="let h of headers">{{h}}</th>
      </tr>
    </thead>
-   <tbody>
-     <tr *ngFor="let prd of products" (click)="selectRecord(prd)">
+   <!-- <tbody> -->
+     <tr *ngFor="let prd of products" (click)="selectRecord(prd)" [setColor]="color">
          <td *ngFor="let h of headers">
            {{prd[h]}}
          </td>
      </tr>
-   </tbody>
+   <!-- </tbody> -->
 </table>
 </div>
