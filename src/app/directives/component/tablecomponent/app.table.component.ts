@@ -31,7 +31,7 @@ export class TableComponent implements OnInit {
 
     @Input()
     set DataSource(v:Array<any>){
-      console.log(`Set Updated... ${JSON.stringify(this._DataSource)}`);
+
       this._DataSource  = v;
       if(this._DataSource !== undefined && this._DataSource.length > 0){
 
@@ -44,7 +44,7 @@ export class TableComponent implements OnInit {
 
     }
     get DataSource():Array<any>{
-      console.log(`Get Updated... ${JSON.stringify(this._DataSource)}`);
+
       return this._DataSource;
     }
 }

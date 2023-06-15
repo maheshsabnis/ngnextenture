@@ -11,6 +11,8 @@ const routes: Routes = [
   }] } ,
   {path:'create', component:CreateDeptComponent},
   {path:'edit/:id', component:EditDeptComponent},
+  {path:'lazy', loadChildren:()=> import('./../../lazymodule/app.lazy.module')
+  .then(m=>m.LazyModule) },
   {path:'**', redirectTo:''}
 ];
 

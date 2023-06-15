@@ -160,7 +160,9 @@ this.fields.push({ ...fieldProps, fieldName: field });
         - APplied to anchor tag
         - USed for Querying to the router table
       - router-outlet
-        - A Component that is injected with Components from Route expression based on query exeuted by router-link               
+        - A Component that is injected with Components from Route expression based on query exeuted by router-link             
+
+        https://blog.angular-university.io/angular-custom-form-controls/  
 
 
 

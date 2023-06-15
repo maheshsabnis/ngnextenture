@@ -1,5 +1,12 @@
 <select class="form-group"
-       (change)="onChange($event)">
+        formControl="MyFormControl"
+       >
     <option>Select your choice</option>
+      <!-- <ng-container *ngIf="DataSource.length>0">
+         <option *ngFor="let o of DataSource" value="{{o}}">{{o}}</option>
+    </ng-container> -->
     <option *ngFor="let o of DataSource" value="{{o}}">{{o}}</option>
+
+
+
 </select>
