@@ -67,4 +67,24 @@
   - If the component(s) is affected based on Keyboard/Mouse events then instaed of using frequent event binding for UI of each component, use Custom Directive
 
 
+  ````javascript
+getFormControlsFields() {
+    const formGroupFields = {};
+    for (const field of Object.keys(this.model)) {
+      const fieldProps = this.model[field];
+      formGroupFields[field] = new FormControl(fieldProps.value);
+this.fields.push({ ...fieldProps, fieldName: field });
+    }
+    return formGroupFields;
+  }
+
+
+<form [formGroup]="formName">
+    <label>{{field.label}}</label>
+    <input [type]="field.type" [formControlName]="field.fieldName"/>
+</form>
+
+  ````
+
+
 
