@@ -8,7 +8,8 @@ import { CustomValidator } from './app.custom.validator';
 
 @Component({
   selector: 'app-productreactiveform-component',
-  templateUrl: './app.productreactiveform.view.html'
+  templateUrl: './app.productreactiveform.view.html',
+
 })
 
 export class ProductReactiveFormComponent implements OnInit, OnChanges {
@@ -33,9 +34,6 @@ export class ProductReactiveFormComponent implements OnInit, OnChanges {
       Manufacturer: new FormControl(this.product.Manufacturer),
       Price: new FormControl(this.product.Price)
     })
-
-
-
   }
 
   ngOnInit() {
@@ -52,6 +50,7 @@ export class ProductReactiveFormComponent implements OnInit, OnChanges {
   save():void {
     this.product = this.frmProduct.value;
     this.products = this.logic.addProduct(this.product);
+    alert(JSON.stringify(this.frmProduct.value));
   }
 
   categoryChange(evt:any):void{
