@@ -164,6 +164,17 @@ this.fields.push({ ...fieldProps, fieldName: field });
 
         https://blog.angular-university.io/angular-custom-form-controls/  
 
+#Angular Unit Testing
+  - Arrange
+    - Organize all requirements for writing Unit Test
+    - Define an expectation
+  - Act
+    - Call the Method or perform operations
+    - Actual Test is here. This returns actual result
+  - Assert
+    - Eveluate the Test Result  
+    - Compare Actual Result with Expectation to check if test pass or fails
+
 
 
 

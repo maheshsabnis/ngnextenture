@@ -57,6 +57,6 @@ import { EditDeptComponent } from './myroute/editdeptcomponent/app.editdept.comp
   providers: [
 
   ],
-  bootstrap: [MainRoutingComponent]
+  bootstrap: [ProductComponent]
 })
 export class AppModule { }

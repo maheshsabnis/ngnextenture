@@ -15,6 +15,7 @@ export class ProductComponent implements OnInit, OnChanges {
   categories = Categories;
   manufacturers = Manufacturers;
   color:string;
+  tax:number;
   headers:Array<string>;
   constructor() {
     this.products = new Array<Product>();
@@ -22,6 +23,7 @@ export class ProductComponent implements OnInit, OnChanges {
     this.product = new Product(0,'','','',0);
     this.headers = new Array<string>();
     this.color = '';
+    this.tax =0;
   }
 
   ngOnInit() {
@@ -36,6 +38,7 @@ export class ProductComponent implements OnInit, OnChanges {
     this.product = new Product(0,'','','',0);
   }
   save():void {
+    this.tax = this.product.Price * 0.2;
     this.products = this.logic.addProduct(this.product);
   }
 
